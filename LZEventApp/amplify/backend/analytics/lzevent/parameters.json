@@ -1,0 +1,11 @@
+{
+    "appName": "lzevent",
+    "roleName": "pinpointLambdaRole6b92046b",
+    "cloudWatchPolicyName": "cloudWatchPolicy6b92046b",
+    "pinpointPolicyName": "pinpointPolicy6b92046b",
+    "authPolicyName": "pinpoint_amplify_6b92046b",
+    "unauthPolicyName": "pinpoint_amplify_6b92046b",
+    "authRoleName": "vent-20190123170814-authRole",
+    "unauthRoleName": "vent-20190123170814-unauthRole",
+    "IAMPrefix": "993343851857"
+}

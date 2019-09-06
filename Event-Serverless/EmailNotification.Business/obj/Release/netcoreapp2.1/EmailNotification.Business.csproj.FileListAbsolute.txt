@@ -1,0 +1,16 @@
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\bin\Release\netcoreapp2.1\EmailNotification.Business.deps.json
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\bin\Release\netcoreapp2.1\EmailNotification.Business.dll
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\bin\Release\netcoreapp2.1\EmailNotification.Business.pdb
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\bin\Release\netcoreapp2.1\EmailNotification.Contracts.dll
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\bin\Release\netcoreapp2.1\EmailNotification.Models.dll
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\bin\Release\netcoreapp2.1\EmailNotification.Contracts.pdb
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\bin\Release\netcoreapp2.1\EmailNotification.Models.pdb
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\obj\Release\netcoreapp2.1\EmailNotification.Business.csprojAssemblyReference.cache
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\obj\Release\netcoreapp2.1\EmailNotification.Business.csproj.CoreCompileInputs.cache
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\obj\Release\netcoreapp2.1\EmailNotification.Business.AssemblyInfoInputs.cache
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\obj\Release\netcoreapp2.1\EmailNotification.Business.AssemblyInfo.cs
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\obj\Release\netcoreapp2.1\EmailNotification.Business.csproj.CopyComplete
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\obj\Release\netcoreapp2.1\EmailNotification.Business.dll
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\obj\Release\netcoreapp2.1\EmailNotification.Business.pdb
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\bin\Release\netcoreapp2.1\EmailNotification.Business.runtimeconfig.json
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Business\bin\Release\netcoreapp2.1\EmailNotification.Business.runtimeconfig.dev.json

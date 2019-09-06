@@ -1,0 +1,36 @@
+
+<table>
+  <tr>
+    <td>
+<div>
+    <div class="container">          
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Notify</th>
+              <th>Email</th>
+              <th>Paid</th>
+              <th>Details Of Event</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let c of myEvents" >
+                <td><input type="checkbox"></td>
+              <td>{{c.EventName}}</td>
+              <td><input type="button" value="Paid"> </td>
+              <td><a (click)="test(c.EventID)">{{c.EventName}}</a></td>
+            </tr>
+
+            
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </td>
+    </tr>
+<tr style="text-align:center">
+  <td>
+    <input type="button" value="Notify All">
+  </td>
+</tr>
+  </table>

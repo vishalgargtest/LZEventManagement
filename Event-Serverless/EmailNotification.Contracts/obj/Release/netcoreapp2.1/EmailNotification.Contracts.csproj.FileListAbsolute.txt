@@ -1,0 +1,10 @@
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Contracts\bin\Release\netcoreapp2.1\EmailNotification.Contracts.deps.json
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Contracts\bin\Release\netcoreapp2.1\EmailNotification.Contracts.dll
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Contracts\bin\Release\netcoreapp2.1\EmailNotification.Contracts.pdb
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Contracts\obj\Release\netcoreapp2.1\EmailNotification.Contracts.csproj.CoreCompileInputs.cache
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Contracts\obj\Release\netcoreapp2.1\EmailNotification.Contracts.AssemblyInfoInputs.cache
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Contracts\obj\Release\netcoreapp2.1\EmailNotification.Contracts.AssemblyInfo.cs
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Contracts\obj\Release\netcoreapp2.1\EmailNotification.Contracts.dll
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Contracts\obj\Release\netcoreapp2.1\EmailNotification.Contracts.pdb
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Contracts\bin\Release\netcoreapp2.1\EmailNotification.Contracts.runtimeconfig.json
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Contracts\bin\Release\netcoreapp2.1\EmailNotification.Contracts.runtimeconfig.dev.json

@@ -1,0 +1,126 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Transform" : "AWS::Serverless-2016-10-31",
+  "Description" : "An AWS Serverless Application.",
+
+  "Resources" : {
+
+	"NotifyContributorsTopic": {
+      "Type": "AWS::SNS::Topic",
+      "Properties": {
+        "DisplayName": "lz-event-mgmt-notify-contributors",
+        "TopicName": "lz-event-mgmt-notify-contributors"
+      }
+    },
+	"NotifyContributorsRole":{
+		"Type":"AWS::IAM::Role",
+		"Properties": {
+        "RoleName": "notify-contributors-execution-role",
+        "Path": "/",
+        "Policies": [
+          {
+            "PolicyName": "CloudWatchLogsFullAccess",
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": [
+                    "logs:*"
+                  ],
+                  "Effect": "Allow",
+                  "Resource": "arn:aws:logs:*:*:*"
+                }
+              ]
+            }
+          },
+          {
+            "PolicyName": "SNSFullAccess",
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": [
+                    "sns:*"
+                  ],
+                  "Effect": "Allow",
+                  "Resource": "*"
+                }
+              ]
+            }
+          },
+          {
+            "PolicyName": "DynamoDBFullAccess",
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": [
+                    "dynamodb:*"
+                  ],
+                  "Effect": "Allow",
+                  "Resource": "*"
+                }
+              ]
+            }
+          }
+        ],
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "sts:AssumeRole"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "lambda.amazonaws.com"
+                ]
+              }
+            }
+          ]
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+        ]
+      }
+	},
+	"NotifyContributorsLambda": {
+		"Type":"AWS::Serverless::Function",
+        
+		"Properties": {
+			"MemorySize": 128,
+			"Handler": "NotifyContributors1::NotifyContributors1.Function::FunctionHandler",
+			"Role": {
+				"Fn::GetAtt": [
+				"NotifyContributorsRole",
+				"Arn"
+				]
+			},
+			"Runtime": "dotnetcore2.1",
+            "FunctionName" : "NotifyLambda",
+			"Events": {
+				"NotifyContributors": {
+					"Type": "SNS",
+					"Properties": {
+						"Topic": {
+							"Ref": "NotifyContributorsTopic"
+						}
+					}
+				}
+			}
+		}
+  }
+  },
+  "Outputs" : {
+	"NotifyContributorsLambdaArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "NotifyContributorsLambda",
+          "Arn"
+        ]
+      }
+    },
+    "NotifyContributorsTopicArn": {
+      "Value": {
+        "Ref": "NotifyContributorsTopic"
+      }
+    }
+  }
+}

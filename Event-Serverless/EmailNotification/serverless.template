@@ -1,0 +1,183 @@
+{
+	"AWSTemplateFormatVersion" : "2010-09-09",
+	"Transform" : "AWS::Serverless-2016-10-31",
+	"Description" : "An AWS Serverless Application.",
+
+	"Resources" : {
+		"EventManagementLambda" : {
+		"Type" : "AWS::Serverless::Function",
+			"Properties": {
+				"Handler": "EmailNotification::EmailNotification.NotificationFunction::TriggerEmailAsync",
+				"Runtime": "dotnetcore2.1",
+				"CodeUri": "",
+				"MemorySize": 256,
+				"Timeout": 30,
+				"Role"        : {
+                    "Fn::GetAtt" : [
+                        "AppSyncEmailLambdaExecutionRole",
+                        "Arn"
+                    ]
+                },
+				"Events": {
+					"TriggerEmailEvent": {
+						"Type": "SNS",
+						"Properties": {
+							"Topic" : {
+								"Ref" : "SendEmailTopic"
+							}
+						}
+					}
+				}
+			}
+		},
+		 "SendEmailTopic"                 : {
+            "Type" : "AWS::SNS::Topic",
+            "Properties" : {
+                "DisplayName" : "send-email-topic",
+                "TopicName"   : "sent-email-topic"
+            }
+        },
+		 "AppSyncEmailLambda"          : {
+            "Type" : "AWS::Serverless::Function",
+            "Properties" : {
+                "Description" : "publisher function",
+                "MemorySize"  : 256,
+                "Handler"     : "EmailNotification::EmailNotification.AppSyncNotifyFunction::ExecuteAsync",
+                "Role"        : {
+                    "Fn::GetAtt" : [
+                        "AppSyncEmailLambdaExecutionRole",
+                        "Arn"
+                    ]
+                },
+                "Timeout"     : 30,
+                "Runtime"     : "dotnetcore2.1",
+                "FunctionName" : "SendEmail",
+                "Environment"  : {
+                    "Variables" : {
+                        "ChatStartedTopicArn" : {
+                            "Ref" : "SendEmailTopic"
+                        }
+                    }
+                }
+            }
+        },
+		 "AppSyncEmailLambdaExecutionRole" : {
+            "Type" : "AWS::IAM::Role",
+            "Properties" : {
+                "RoleName" : "eventManagement-execution-role",
+                "Path"     : "/",
+                "Policies" : [
+                    {
+                        "PolicyName" : "CloudWatchLogsFullAccess",
+                        "PolicyDocument" : {
+                            "Statement" : [
+                                {
+                                    "Action" : [
+                                        "logs:*"
+                                    ],
+                                    "Effect" : "Allow",
+                                    "Resource" : "arn:aws:logs:*:*:*"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "PolicyName" : "SNSFullAccess",
+                        "PolicyDocument" : {
+                            "Statement" : [
+                                {
+                                    "Action" : [
+                                        "sns:*"
+                                    ],
+                                    "Effect" : "Allow",
+                                    "Resource" : "*"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "PolicyName" : "SQSFullAccess",
+                        "PolicyDocument" : {
+                            "Statement" : [
+                                {
+                                    "Action" : [
+                                        "sqs:*"
+                                    ],
+                                    "Effect" : "Allow",
+                                    "Resource" : "*"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "PolicyName" : "LambdaFullAccess",
+                        "PolicyDocument" : {
+                            "Statement" : [
+                                {
+                                    "Action" : [
+                                        "lambda:*"
+                                    ],
+                                    "Effect" : "Allow",
+                                    "Resource" : "*"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "PolicyName" : "DynamoDBFullAccess",
+                        "PolicyDocument" : {
+                            "Statement" : [
+                                {
+                                    "Action" : [
+                                        "dynamodb:*"
+                                    ],
+                                    "Effect" : "Allow",
+                                    "Resource" : "*"
+                                }
+                            ]
+                        }
+                    },
+					{
+                        "PolicyName" : "AmazonSESFullAccess",
+                        "PolicyDocument" : {
+                            "Statement" : [
+                                {
+                                    "Action" : [
+                                        "ses:*"
+                                    ],
+                                    "Effect" : "Allow",
+                                    "Resource" : "*"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "AssumeRolePolicyDocument" : {
+                    "Statement" : [
+                        {
+                            "Action" : [
+                                "sts:AssumeRole"
+                            ],
+                            "Effect" : "Allow",
+                            "Principal" : {
+                                "Service" : [
+                                    "lambda.amazonaws.com"
+                                ]
+                            }
+                        }
+                    ]
+                }
+             }
+        }
+	},
+
+	"Outputs" : {
+		"LambdaArn" : {
+			"Description" : "LambdaArn",
+			"Value" : { "Fn::GetAtt" : [
+			"EventManagementLambda",
+			"Arn"
+			] }
+		}
+	}
+}

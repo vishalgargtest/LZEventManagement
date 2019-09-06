@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "ventpp-20190201171150-authRole",
+            "UnauthRoleArn": "arn:aws:iam::388645573000:role/ventpp-20190201171150-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::388645573000:role/ventpp-20190201171150-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "ventpp-20190201171150-deployment",
+            "UnauthRoleName": "ventpp-20190201171150-unauthRole",
+            "StackName": "ventpp-20190201171150",
+            "StackId": "arn:aws:cloudformation:us-west-2:388645573000:stack/ventpp-20190201171150/5e449640-2616-11e9-a977-06ccd811a1e0"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Models\bin\Release\netcoreapp2.1\EmailNotification.Models.deps.json
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Models\bin\Release\netcoreapp2.1\EmailNotification.Models.dll
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Models\bin\Release\netcoreapp2.1\EmailNotification.Models.pdb
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Models\obj\Release\netcoreapp2.1\EmailNotification.Models.csproj.CoreCompileInputs.cache
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Models\obj\Release\netcoreapp2.1\EmailNotification.Models.AssemblyInfoInputs.cache
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Models\obj\Release\netcoreapp2.1\EmailNotification.Models.AssemblyInfo.cs
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Models\obj\Release\netcoreapp2.1\EmailNotification.Models.dll
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Models\obj\Release\netcoreapp2.1\EmailNotification.Models.pdb
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Models\bin\Release\netcoreapp2.1\EmailNotification.Models.runtimeconfig.json
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Models\bin\Release\netcoreapp2.1\EmailNotification.Models.runtimeconfig.dev.json
+D:\Vishal Garg\Essentials\LZEventManagement\Event-Serverless\EmailNotification.Models\obj\Release\netcoreapp2.1\EmailNotification.Models.csprojAssemblyReference.cache

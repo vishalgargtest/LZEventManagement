@@ -1,0 +1,21 @@
+<div class="container"> 
+<table class="table">
+    <thead>
+        <tr>
+          <th>Email</th>
+          <th>Amount</th>
+          <th>Send Mail</th>
+        </tr>
+      </thead>
+      <tbody>
+          
+              <td>{{eventContributor.email}}</td>
+            <td>{{eventContributor.amount}}</td>
+            <td><button [disabled]="eventContributor.paid" >Send Mail</button> </td>
+        
+
+          
+        </tbody>
+  </table>
+  </div>
+ 
